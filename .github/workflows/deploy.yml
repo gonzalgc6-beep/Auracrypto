@@ -1,4 +1,4 @@
- name: Deploy Aura Crypto to GitHub Pages
+name: Deploy Aura Crypto to GitHub Pages
 
 on:
   push:
