@@ -48,5 +48,7 @@ function marketProxy(apiKey: string) {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  return { plugins: [react(), tailwindcss(), marketProxy(env.COINGECKO_API_KEY || '')] };
-});
+  return {
+  base: process.env.GITHUB_ACTIONS ? '/Auracrypto/' : '/',
+  plugins: [react(), tailwindcss(), marketProxy(env.COINGECKO_API_KEY || '')],
+};
