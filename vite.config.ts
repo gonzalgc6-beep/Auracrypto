@@ -50,5 +50,6 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return {
   base: process.env.GITHUB_ACTIONS ? '/Auracrypto/' : '/',
-  plugins: [react(), tailwindcss(), marketProxy(env.COINGECKO_API_KEY || '')],
+   plugins: [react(), tailwindcss(), marketProxy(env.COINGECKO_API_KEY || '')],
 };
+});
